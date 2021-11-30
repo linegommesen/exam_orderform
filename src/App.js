@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Nav from "./components/Nav";
+import ProductList from "./components/ProductList";
+import Basket from "./components/Basket";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://bandoen.herokuapp.com/")
+      .then((res) => res.json())
+      .then((data) => {
+        const array = [];
+        data.taps.forEach((product) => {
+          if (!array.includes(product.beer)) {
+            array.push(product.beer);
+          }
+        });
+        setProducts(array);
+      });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+
+      {products && <ProductList products={products} />}
+      <Basket />
     </div>
   );
 }
