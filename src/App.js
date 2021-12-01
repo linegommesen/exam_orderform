@@ -31,6 +31,7 @@ function App() {
           if (array.includes(beer.name)) {
             console.log("Taps:", array);
             secondArray.push(beer.name);
+            console.log("Secondarray", secondArray);
           }
         });
         setProducts(secondArray);
