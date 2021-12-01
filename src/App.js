@@ -7,6 +7,9 @@ import { useState, useEffect } from "react";
 function App() {
   const [products, setProducts] = useState([]);
   const [products2, setProducts2] = useState([]);
+
+  const [basket, setBasket] = useState([]);
+
   useEffect(() => {
     fetch("https://bandoen.herokuapp.com/")
       .then((res) => res.json())
@@ -29,19 +32,27 @@ function App() {
         const secondArray = [];
         data2.forEach((beer) => {
           if (array.includes(beer.name)) {
-            console.log("Taps:", array);
+            // console.log("Taps:", array);
             secondArray.push(beer.name);
-            console.log("Secondarray", secondArray);
+            // console.log("Secondarray", secondArray);
           }
         });
         setProducts(secondArray);
       });
   }
+
+  function addToBasket(product) {
+    setBasket(function (oldBasket) {
+      const nextState = oldBasket.concat(product);
+      return nextState;
+    });
+  }
   return (
     <div className="App">
+      <button onClick={addToBasket}>Add to basket</button>
       <Nav />
       {products && <ProductList products={products} products2={products2} />}
-      <Basket />
+      <Basket basket={basket} />
     </div>
   );
 }

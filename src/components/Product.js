@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import Counter from "./Stateful";
+import Counter from "./Stateful";
 
 export default function Product(props) {
   return (
@@ -8,6 +8,7 @@ export default function Product(props) {
       <p>Alc: {props.beer.alc} %</p>
       <p>{props.beer.category}</p>
       <button>Read more</button>
+      <Counter {...props} />
     </article>
   );
 }
