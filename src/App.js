@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 import { useState, useEffect } from "react";
+import { setPrice } from "./helpers";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -32,8 +33,12 @@ function App() {
         const secondArray = [];
         data2.forEach((beer) => {
           if (array.includes(beer.name)) {
+            const min = 40;
+            const max = 65;
+            const price = setPrice(min, max);
+            beer.price = price;
             // console.log("Taps:", array);
-            secondArray.push(beer.name);
+            secondArray.push(beer);
             // console.log("Secondarray", secondArray);
           }
         });
@@ -47,11 +52,12 @@ function App() {
       return nextState;
     });
   }
+
   return (
     <div className="App">
       <button onClick={addToBasket}>Add to basket</button>
       <Nav />
-      {products && <ProductList products={products} products2={products2} />}
+      {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
       <Basket basket={basket} />
     </div>
   );

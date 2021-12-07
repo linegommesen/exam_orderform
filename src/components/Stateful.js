@@ -1,10 +1,20 @@
 import { useState } from "react";
+import Price from "./Price";
 
 export default function Counter(props) {
   let amount = 0;
   const [count, setCount] = useState(amount);
 
   function handleClickPlus() {
+    props.setBasket(function (oldBasket) {
+      const nextState = oldBasket.concat({
+        name: props.beer.name,
+        price: props.beer.price,
+        count: count,
+      });
+      return nextState;
+    });
+
     setCount((prevCount) => prevCount + 1);
   }
   function handleClickMinus() {

@@ -3,6 +3,7 @@ import React from "react";
 import Counter from "./Stateful";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimatedModal from "./animated-modal.component";
+import Price from "./Price";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -39,9 +40,9 @@ export default function Product(props) {
 
   // const [open, setState] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = () => {
     setOpen(false);
@@ -51,6 +52,9 @@ export default function Product(props) {
       <h3>{props.beer.name}</h3>
       <p>Alc: {props.beer.alc} %</p>
       <p>{props.beer.category}</p>
+      <p>{props.beer.price}</p>
+
+      {/* <Price></Price> */}
       <AnimatedModal {...props} aria-labelledby="animated-modal-title" aria-describedby="animated-modal-description" open={open} onClose={handleClose}></AnimatedModal>
 
       <Counter {...props} />

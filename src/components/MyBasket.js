@@ -7,6 +7,7 @@ export default function MyBasket(props) {
     <div>
       <h2>Your Basket</h2>
       <p>{props.basket.length} items</p>
+      <p>Total: {sum} DKK</p>
     </div>
   );
 }
