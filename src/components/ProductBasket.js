@@ -1,16 +1,19 @@
 // import Product from "./Product";
 
+import { useState } from "react";
+
 export default function ProductBasket(props) {
-  //   console.log(props);
   const basketContent = props.basket.map((product, index) => {
     return (
       <div>
         <article key={index}>
           <h3>{product.name}</h3>
           <p>{product.price}</p>
+          <p>{product.amount}</p>
         </article>
       </div>
     );
   });
+
   return <section>{basketContent}</section>;
 }
