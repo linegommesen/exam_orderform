@@ -52,7 +52,7 @@ export default function Product(props) {
       <h3>{props.beer.name}</h3>
       <p>Alc: {props.beer.alc} %</p>
       <p>{props.beer.category}</p>
-      <p>{props.beer.price}</p>
+      <p>Price: {props.beer.price} DKK</p>
 
       {/* <Price></Price> */}
       <AnimatedModal {...props} aria-labelledby="animated-modal-title" aria-describedby="animated-modal-description" open={open} onClose={handleClose}></AnimatedModal>

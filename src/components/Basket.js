@@ -1,14 +1,13 @@
 import MyBasket from "./MyBasket";
-import CheckoutForm from "./CheckoutForm";
 import ProductBasket from "./ProductBasket";
 
 export default function Basket(props) {
-  console.log(props);
+  console.log("Baket props", props);
   return (
     <aside>
       <ProductBasket basket={props.basket}></ProductBasket>
       <MyBasket basket={props.basket} />
-      <CheckoutForm />
+      <button onClick={() => props.setPage("form")}>Go to checkout</button>
     </aside>
   );
 }

@@ -1,8 +1,8 @@
-.App {
+.Shop {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
-.App > * {
+.Shop > * {
   border: 1px solid #000;
 }
 header {

@@ -4,8 +4,12 @@ import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 import { useState, useEffect } from "react";
 import { setPrice } from "./helpers";
+import Receipt from "./components/Receipt";
+import MyCards from "./components/MyCards";
 
 function App() {
+  const [page, setPage] = useState("front");
+
   const [products, setProducts] = useState([]);
   const [products2, setProducts2] = useState([]);
 
@@ -52,13 +56,21 @@ function App() {
       return nextState;
     });
   }
+  const Shop = (props) => {
+    return (
+      <div className="Shop">
+        <Nav />
+        {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
+        <Basket basket={basket} setPage={setPage} />
+      </div>
+    );
+  };
 
   return (
     <div className="App">
-      <button onClick={addToBasket}>Add to basket</button>
-      <Nav />
-      {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
-      <Basket basket={basket} />
+      {page === "front" && <Shop setPage={setPage} />}
+      {page === "form" && <MyCards setPage={setPage} />}
+      {page === "receipt" && <Receipt setPage={setPage} />}
     </div>
   );
 }
