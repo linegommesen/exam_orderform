@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Price from "./Price";
+import Button from "@material-ui/core/Button";
 
 export default function Counter(props) {
   let amount = 0;
@@ -33,6 +34,7 @@ export default function Counter(props) {
     });
 
     setCount((prevCount) => prevCount + 1);
+    console.log(count);
   }
   function handleClickMinus() {
     console.log("minus");
@@ -59,7 +61,7 @@ export default function Counter(props) {
     });
   }
   return (
-    <div>
+    <div className="button-container">
       <button onClick={handleClickPlus}>+</button>
       {count}
       <button onClick={handleClickMinus}>-</button>

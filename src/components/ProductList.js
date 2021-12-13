@@ -5,7 +5,7 @@ export default function ProductList(props, props2) {
   const mapped = props.products.map((product, index) => <Product key={index} beer={product} setBasket={props.setBasket} />);
   return (
     <section>
-      <h1>Product List</h1>
+      <h1>Beers of the day</h1>
       <section className="ProductList">{mapped}</section>
     </section>
   );

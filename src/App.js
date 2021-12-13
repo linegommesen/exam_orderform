@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Nav from "./components/Nav";
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { setPrice } from "./helpers";
 import Receipt from "./components/Receipt";
 import MyCards from "./components/MyCards";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const [page, setPage] = useState("front");
@@ -59,7 +60,6 @@ function App() {
   const Shop = (props) => {
     return (
       <div className="Shop">
-        <Nav />
         {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
         <Basket basket={basket} setPage={setPage} />
       </div>
@@ -67,10 +67,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {page === "front" && <Shop setPage={setPage} />}
-      {page === "form" && <MyCards setPage={setPage} />}
-      {page === "receipt" && <Receipt setPage={setPage} />}
+    <div className="App" id="outer-container">
+      <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} basket={basket} setPage={setPage} />
+      <div id="page-wrap">
+        {page === "front" && <Shop setPage={setPage} />}
+        {page === "form" && <MyCards setPage={setPage} />}
+        {page === "receipt" && <Receipt setPage={setPage} />}
+      </div>
     </div>
   );
 }

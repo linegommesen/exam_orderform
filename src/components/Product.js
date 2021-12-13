@@ -38,17 +38,15 @@ export default function Product(props) {
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
 
-  // const [open, setState] = React.useState(false);
-
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-
   const handleClose = () => {
     setOpen(false);
   };
   return (
     <article className="product">
+      {/* <img src={props.beer.label} alt="" /> */}
+      {/* <img src="public/images/elhefe.png" alt="" style={{width: '100%', height='100%'}}/> */}
+      {/* <Image source={require("../images/elhefe.png")} style={{width: '100%', height='100%'}}/> */}
+      {/* <Image source={require("./elhefe.png")} style={{ width: "100%", height: "100%" }} /> */}
       <h3>{props.beer.name}</h3>
       <p>Alc: {props.beer.alc} %</p>
       <p>{props.beer.category}</p>

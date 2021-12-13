@@ -1,0 +1,30 @@
+#Basket {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+
+  p,
+  h2,
+  h3 {
+    color: #292e3d;
+  }
+  .subtotal {
+    border-top: 3px solid;
+    padding-top: 1.7rem;
+  }
+  .item-in-basket {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 3px solid;
+  }
+}
+#Basket > * {
+  margin: 2rem;
+}
+#your-basket {
+  position: absolute;
+  bottom: 0;
+
+  // background-color: #f50057;
+}

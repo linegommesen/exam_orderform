@@ -5,11 +5,11 @@ import { useState } from "react";
 export default function ProductBasket(props) {
   const basketContent = props.basket.map((product, index) => {
     return (
-      <div>
+      <div className="item-in-basket">
         <article key={index}>
           <h3>{product.name}</h3>
-          <p>{product.price}</p>
-          <p>{product.amount}</p>
+          <p>Price: {product.price} DKK</p>
+          <p>Amount: {product.amount}</p>
         </article>
       </div>
     );

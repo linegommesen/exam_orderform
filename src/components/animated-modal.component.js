@@ -37,10 +37,11 @@ export default function AnimatedModal(props) {
   //   }
 
   return (
-    <div>
-      <Button variant="contained" color="secondary" onClick={handleOpen}>
+    <div className="button-container">
+      {/* <Button variant="contained" color="secondary" onClick={handleOpen}>
         Read more
-      </Button>
+      </Button> */}
+      <button onClick={handleOpen}>Read more</button>
 
       <Modal
         aria-labelledby="transition-modal-title"
@@ -55,18 +56,22 @@ export default function AnimatedModal(props) {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
+          <div className={classes.paper} id="modal">
             <h2>{props.beer.name}</h2>
-            <h3>Appearance:</h3>
-            <p>{props.beer.description.appearance}</p>
-            <h3>Aroma:</h3>
-            <p>{props.beer.description.aroma}</p>
-            <h3>Flavor:</h3>
-            <p>{props.beer.description.flavor}</p>
-            <h3>Mouthfeel:</h3>
-            <p>{props.beer.description.mouthfeel}</p>
-            <h3>Overall impression:</h3>
-            <p>{props.beer.description.overallImpression}</p>
+            <div className="left-column">
+              <h3>Appearance:</h3>
+              <p>{props.beer.description.appearance}</p>
+              <h3>Aroma:</h3>
+              <p>{props.beer.description.aroma}</p>
+              <h3>Flavor:</h3>
+              <p>{props.beer.description.flavor}</p>
+            </div>
+            <div className="right-column">
+              <h3>Mouthfeel:</h3>
+              <p>{props.beer.description.mouthfeel}</p>
+              <h3>Overall impression:</h3>
+              <p>{props.beer.description.overallImpression}</p>
+            </div>
           </div>
         </Fade>
       </Modal>
