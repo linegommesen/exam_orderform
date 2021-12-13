@@ -61,7 +61,7 @@ function App() {
     return (
       <div className="Shop">
         {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
-        <Basket basket={basket} setPage={setPage} />
+        {/* <Basket basket={basket} setPage={setPage} /> */}
       </div>
     );
   };

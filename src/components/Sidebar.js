@@ -7,17 +7,9 @@ import ProductBasket from "./ProductBasket";
 export default (props) => {
   return (
     <Menu>
+      <h2>Your Basket</h2>
       <ProductBasket basket={props.basket}></ProductBasket>
       <MyBasket basket={props.basket} setPage={props.setPage} />
     </Menu>
   );
 };
-
-// export default function Menu(props) {
-//   return (
-//     <Menu>
-//       <ProductBasket basket={props.basket}></ProductBasket>
-//       <MyBasket basket={props.basket} setPage={props.setPage} />
-//     </Menu>
-//   );
-// }

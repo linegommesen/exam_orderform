@@ -3,7 +3,7 @@
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 36px;
 }
 
@@ -54,7 +54,7 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: black;
   padding: 0.8em;
 }
 
@@ -72,7 +72,7 @@
 .bm-item {
   display: inline-block;
 
-  color: #d1d1d1;
+  color: black;
   margin-bottom: 10px;
   text-align: left;
   text-decoration: none;
@@ -81,4 +81,12 @@
 
 .bm-item:hover {
   color: #ffffff;
+}
+
+/* Lines code */
+.item-in-basket {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 3px solid;
 }
