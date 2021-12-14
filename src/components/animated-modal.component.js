@@ -41,7 +41,9 @@ export default function AnimatedModal(props) {
       {/* <Button variant="contained" color="secondary" onClick={handleOpen}>
         Read more
       </Button> */}
-      <button onClick={handleOpen}>Read more</button>
+      <button className="read-more" onClick={handleOpen}>
+        Read more
+      </button>
 
       <Modal
         aria-labelledby="transition-modal-title"

@@ -43,16 +43,12 @@ export default function Product(props) {
   };
   return (
     <article className="product">
-      {/* <img src={props.beer.label} alt="" /> */}
-      {/* <img src="public/images/elhefe.png" alt="" style={{width: '100%', height='100%'}}/> */}
-      {/* <Image source={require("../images/elhefe.png")} style={{width: '100%', height='100%'}}/> */}
-      {/* <Image source={require("./elhefe.png")} style={{ width: "100%", height: "100%" }} /> */}
+      <img src={`./images/${props.beer.label}`} alt={props.beer.name} style={{ width: "40%", height: "auto" }} />
       <h3>{props.beer.name}</h3>
       <p>Alc: {props.beer.alc} %</p>
       <p>{props.beer.category}</p>
       <p>Price: {props.beer.price} DKK</p>
 
-      {/* <Price></Price> */}
       <AnimatedModal {...props} aria-labelledby="animated-modal-title" aria-describedby="animated-modal-description" open={open} onClose={handleClose}></AnimatedModal>
 
       <Counter {...props} />

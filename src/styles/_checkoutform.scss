@@ -4,7 +4,7 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #292e3d;
+  background-color: #f8f9fb;
 }
 #Payment-app {
   width: 450px;
@@ -14,6 +14,7 @@
   flex-direction: column;
   background: #ffff;
   border-radius: 10px;
+  border: 3px solid #f6cc4f;
 }
 form {
   width: 80%;
@@ -34,5 +35,5 @@ input {
 }
 
 .rccs__card--unknown > div {
-  background: #75c9a5;
+  background: #f6cc4f;
 }

@@ -3,8 +3,11 @@ import Price from "./Price";
 import Button from "@material-ui/core/Button";
 
 export default function Counter(props) {
+  const item = props.basket.find((basketitem) => basketitem.name === props.beer.name);
   let amount = 0;
-  const [count, setCount] = useState(amount);
+  if (item && item.amount) {
+    amount = item.amount;
+  }
 
   function handleClickPlus() {
     console.log("plus");
@@ -32,9 +35,6 @@ export default function Counter(props) {
         });
       }
     });
-
-    setCount((prevCount) => prevCount + 1);
-    console.log(count);
   }
   function handleClickMinus() {
     console.log("minus");
@@ -52,18 +52,11 @@ export default function Counter(props) {
         return nextState2;
       }
     });
-
-    setCount((prevCount) => {
-      if (prevCount > 1) {
-        return prevCount - 1;
-      }
-      return 0;
-    });
   }
   return (
     <div className="button-container">
       <button onClick={handleClickPlus}>+</button>
-      {count}
+      {amount}
       <button onClick={handleClickMinus}>-</button>
     </div>
   );

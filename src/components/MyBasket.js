@@ -9,10 +9,12 @@ export default function MyBasket(props) {
       <h2 className="subtotal">Subtotal: {sum} DKK</h2>
       {/* <p>{props.basket.length} items</p> */}
       {/* <p></p> */}
-      {/* <button onClick={() => props.setPage("form")}>Go to checkout</button> */}
-      <Button variant="contained" color="secondary" onClick={() => props.setPage("form")}>
+      <button className="checkout-button" onClick={() => props.setPage("form")}>
+        Go to checkout
+      </button>
+      {/* <Button className="checkout-button" sum={sum} onClick={() => props.setPage("form")}>
         Go to Checkout
-      </Button>
+      </Button> */}
     </div>
   );
 }

@@ -59,20 +59,23 @@ function App() {
   }
   const Shop = (props) => {
     return (
-      <div className="Shop">
-        {products && <ProductList products={products} products2={products2} setBasket={setBasket} />}
-        {/* <Basket basket={basket} setPage={setPage} /> */}
+      <div className="Shop" id="outer-container">
+        <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} basket={basket} setPage={setPage} />
+        <div id="page-wrap">
+          {products && <ProductList products={products} products2={products2} setBasket={setBasket} basket={basket} />}
+          {/* <Basket basket={basket} setPage={setPage} /> */}
+        </div>
       </div>
     );
   };
 
   return (
-    <div className="App" id="outer-container">
-      <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} basket={basket} setPage={setPage} />
-      <div id="page-wrap">
+    <div className="App">
+      {/* <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} basket={basket} setPage={setPage} /> */}
+      <div>
         {page === "front" && <Shop setPage={setPage} />}
-        {page === "form" && <MyCards setPage={setPage} />}
-        {page === "receipt" && <Receipt setPage={setPage} />}
+        {page === "form" && <MyCards basket={basket} setPage={setPage} />}
+        {page === "receipt" && <Receipt basket={basket} setPage={setPage} />}
       </div>
     </div>
   );

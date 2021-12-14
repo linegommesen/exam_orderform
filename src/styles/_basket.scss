@@ -9,14 +9,14 @@
     color: #292e3d;
   }
   .subtotal {
-    border-top: 3px solid;
+    border-top: 3px solid #fdb3d4;
     padding-top: 1.7rem;
   }
   .item-in-basket {
     margin: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #fdb3d4;
   }
 }
 #Basket > * {
@@ -25,6 +25,11 @@
 #your-basket {
   position: absolute;
   bottom: 0;
+  padding-top: 2rem;
+  border-top: 3px solid #fdb3d4;
 
   // background-color: #f50057;
+}
+.product {
+  border: none;
 }

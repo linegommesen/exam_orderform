@@ -1,11 +1,13 @@
 $font-stack: program, sans-serif;
-// $font-color: white;
+$primary-font-color: #4d4f54;
+$secondary-font-color: #f6cc4f;
 h1 {
   font: 100% $font-stack;
   font-weight: 500;
   font-size: 2.5rem;
   text-align: center;
   margin: 2rem;
+  color: $secondary-font-color;
 }
 h2,
 h3 {
@@ -14,14 +16,16 @@ h3 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
+  color: $primary-font-color;
   // color: $font-color;
 }
 h3 {
   font-size: 1.3rem;
+  color: $primary-font-color;
 }
 
 p {
-  // color: $font-color;
+  color: $primary-font-color;
   font: 100% $font-stack;
   font-weight: 400;
   font-size: 16px;
@@ -29,8 +33,15 @@ p {
   margin-bottom: 5px;
 }
 
+button {
+  font: 100% $font-stack;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $primary-font-color;
+}
+
 @media (min-width: 1000px) {
   h1 {
-    font-size: 4rem;
+    font-size: 7rem;
   }
 }

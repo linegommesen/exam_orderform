@@ -9,8 +9,9 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #fdb3d4;
   /* background: white; */
+  /* background-image: url("./images/cart.png"); */
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -88,5 +89,5 @@
   margin: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #f6cc4f;
 }

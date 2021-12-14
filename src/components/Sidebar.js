@@ -6,7 +6,7 @@ import ProductBasket from "./ProductBasket";
 
 export default (props) => {
   return (
-    <Menu>
+    <Menu customBurgerIcon={<img src={`./images/cart.png`} />}>
       <h2>Your Basket</h2>
       <ProductBasket basket={props.basket}></ProductBasket>
       <MyBasket basket={props.basket} setPage={props.setPage} />
