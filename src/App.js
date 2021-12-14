@@ -1,5 +1,5 @@
 import "./App.scss";
-import Nav from "./components/Nav";
+
 import ProductList from "./components/ProductList";
 import Basket from "./components/Basket";
 import { useState, useEffect } from "react";

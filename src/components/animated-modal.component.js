@@ -73,6 +73,7 @@ export default function AnimatedModal(props) {
               <p>{props.beer.description.mouthfeel}</p>
               <h3>Overall impression:</h3>
               <p>{props.beer.description.overallImpression}</p>
+              <img src={`./images/${props.beer.label}`} alt={props.beer.name} />
             </div>
           </div>
         </Fade>

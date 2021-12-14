@@ -7,14 +7,9 @@ export default function MyBasket(props) {
   return (
     <div id="your-basket">
       <h2 className="subtotal">Subtotal: {sum} DKK</h2>
-      {/* <p>{props.basket.length} items</p> */}
-      {/* <p></p> */}
       <button className="checkout-button" onClick={() => props.setPage("form")}>
         Go to checkout
       </button>
-      {/* <Button className="checkout-button" sum={sum} onClick={() => props.setPage("form")}>
-        Go to Checkout
-      </Button> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import Counter from "./Stateful";
+import Counter from "./Counter";
 import { makeStyles } from "@material-ui/core/styles";
 import AnimatedModal from "./animated-modal.component";
 import Price from "./Price";
