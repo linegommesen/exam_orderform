@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Price from "./Price";
-import Button from "@material-ui/core/Button";
 
 export default function Counter(props) {
   const item = props.basket.find((basketitem) => basketitem.name === props.beer.name);
@@ -39,18 +37,15 @@ export default function Counter(props) {
   function handleClickMinus() {
     console.log("minus");
     props.setBasket((old) => {
-      let found2 = false;
-
       const nextState2 = [...old].map((item) => {
         if (item.name === props.beer.name) {
-          found2 = true;
           return { ...item, amount: item.amount - 1 };
         }
         return item;
       });
-      if (found2) {
-        return nextState2;
-      }
+      return nextState2.filter((item) => {
+        return item.amount > 0;
+      });
     });
   }
   return (

@@ -25,7 +25,13 @@ const MyCards = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(props.basket),
-    }).then(() => props.setPage("receipt"));
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem("id", data.id);
+        props.setPage("receipt");
+      });
   };
 
   return (
