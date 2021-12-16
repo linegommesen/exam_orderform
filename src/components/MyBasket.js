@@ -1,4 +1,3 @@
-import Button from "@material-ui/core/Button";
 export default function MyBasket(props) {
   const initialValue = 0;
   let sum = props.basket.reduce(function (previousValue, currentValue) {

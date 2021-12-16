@@ -1,6 +1,5 @@
 import MyBasket from "./MyBasket";
 import ProductBasket from "./ProductBasket";
-// import { slide as Menu } from "react-burger-menu";
 
 export default function Basket(props) {
   console.log("Baket props", props);

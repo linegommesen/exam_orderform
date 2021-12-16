@@ -1,7 +1,7 @@
-import { useState } from "react";
-
 export default function Counter(props) {
-  const item = props.basket.find((basketitem) => basketitem.name === props.beer.name);
+  const item = props.basket.find(
+    (basketitem) => basketitem.name === props.beer.name
+  );
   let amount = 0;
   if (item && item.amount) {
     amount = item.amount;

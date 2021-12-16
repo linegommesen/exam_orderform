@@ -10,6 +10,11 @@
 body {
   background-color: #f8f9fb;
 }
+
+button {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
 }
@@ -49,10 +54,6 @@ header {
   margin-bottom: 10px;
   color: #d1d1d1;
   transition: color 0.2s;
-}
-
-.bm-item:hover {
-  color: white;
 }
 
 .bm-burger-button {

@@ -9,7 +9,6 @@ export default function Receipt(props) {
       <div className="receipt-item">
         <article key={index}>
           <h3>{product.name}</h3>
-          {/* <p>Price: {product.price}</p> */}
           <p>Amount: {product.amount}</p>
         </article>
       </div>

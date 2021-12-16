@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -31,16 +30,8 @@ export default function AnimatedModal(props) {
     setOpen(false);
   };
 
-  //   const beer = props.beer;
-  //   if (!beer) {
-  //     return null;
-  //   }
-
   return (
     <div className="button-container">
-      {/* <Button variant="contained" color="secondary" onClick={handleOpen}>
-        Read more
-      </Button> */}
       <button className="read-more" onClick={handleOpen}>
         Read more
       </button>
