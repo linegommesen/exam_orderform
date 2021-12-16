@@ -22,6 +22,9 @@ body {
 header {
   grid-column: 1/-1;
 }
+.logo {
+  width: 44%;
+}
 
 .open {
   display: initial;
@@ -96,4 +99,10 @@ header {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 700px) {
+  .logo {
+    width: 15%;
+  }
 }

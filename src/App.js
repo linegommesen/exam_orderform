@@ -6,6 +6,7 @@ import { setPrice } from "./helpers";
 import Receipt from "./components/Receipt";
 import MyCards from "./components/MyCards";
 import Sidebar from "./components/Sidebar";
+import Nav from "./components/Nav";
 
 function App() {
   const [page, setPage] = useState("front");
@@ -67,6 +68,7 @@ function App() {
   const Shop = (props) => {
     return (
       <div className="Shop" id="outer-container">
+        <Nav />
         <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} basket={basket} setPage={setPage} />
         <div id="page-wrap">{products && <ProductList products={products} setBasket={setBasket} basket={basket} />}</div>
       </div>
